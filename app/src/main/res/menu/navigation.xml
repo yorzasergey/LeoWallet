@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_purse"
+        android:icon="@drawable/nav_purse"
+        android:title="@string/title_purse"/>
+
+    <item
+        android:id="@+id/navigation_bonuses"
+        android:icon="@drawable/nav_bonuse"
+        android:title="@string/title_bonuses"/>
+
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/nav_history"
+        android:title="@string/title_history"/>
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/nav_profile"
+        android:title="@string/title_profile"/>
+
+</menu>

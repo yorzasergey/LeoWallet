@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/navigation"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <!--app:contentScrim="?attr/colorPrimary"-->
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/collapseConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/collapse_constraint_layout_margin_bottom"
+                    android:background="@android:color/white"
+                    app:layout_collapseMode="pin">
+
+                    <View
+                        android:id="@+id/viewHeadTop"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/leo_wallet_acount_height"
+                        android:background="@drawable/header_background_top"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </View>
+
+                    <View
+                        android:id="@+id/viewHeadDivider"
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:background="@drawable/hed_background_divider"
+                        app:layout_constraintTop_toBottomOf="@+id/leoWalletAccount">
+
+                    </View>
+
+                    <View
+                        android:id="@+id/viewHeadBottom"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_header_bottom_height"
+                        android:background="@drawable/header_background_gradient"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewHeadDivider">
+
+                    </View>
+
+                    <TextView
+                        android:id="@+id/leoWalletAccount"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/leo_wallet_acount_height"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/actionTransfer"
+                        android:layout_width="@dimen/action_image_size"
+                        android:layout_height="@dimen/action_image_size"
+                        android:layout_marginTop="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/action_transfer"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/actionPay"
+                        app:layout_constraintTop_toBottomOf="@+id/searchViewLayout" />
+
+                    <ImageView
+                        android:id="@+id/actionPay"
+                        android:layout_width="@dimen/action_image_size"
+                        android:layout_height="@dimen/action_image_size"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/action_pay"
+                        app:layout_constraintLeft_toRightOf="@id/actionTransfer"
+                        app:layout_constraintRight_toLeftOf="@+id/actionBill"
+                        app:layout_constraintTop_toBottomOf="@+id/searchViewLayout" />
+
+                    <ImageView
+                        android:id="@+id/actionBill"
+                        android:layout_width="@dimen/action_image_size"
+                        android:layout_height="@dimen/action_image_size"
+                        android:layout_marginTop="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/action_bill"
+                        app:layout_constraintLeft_toRightOf="@id/actionPay"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/searchViewLayout" />
+
+                    <TextView
+                        android:id="@+id/textTransfer"
+                        android:layout_width="@dimen/action_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/action_transfer_text"
+                        android:textColor="@color/colorActionText"
+                        android:textSize="15sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/textPay"
+                        app:layout_constraintTop_toBottomOf="@+id/actionTransfer" />
+
+                    <TextView
+                        android:id="@+id/textPay"
+                        android:layout_width="@dimen/action_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/action_pay_text"
+                        android:textColor="@color/colorActionText"
+                        android:textSize="15sp"
+                        app:layout_constraintLeft_toRightOf="@id/textTransfer"
+                        app:layout_constraintRight_toLeftOf="@+id/textBill"
+                        app:layout_constraintTop_toBottomOf="@+id/actionPay" />
+
+                    <TextView
+                        android:id="@+id/textBill"
+                        android:layout_width="@dimen/action_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/action_bill_text"
+                        android:textColor="@color/colorActionText"
+                        android:textSize="15sp"
+                        app:layout_constraintLeft_toRightOf="@id/textPay"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/actionBill" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constraintLayoutBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewHeadDivider">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/currency"
+                            app:layout_constraintBottom_toBottomOf="@+id/textViewBalance"
+                            app:layout_constraintEnd_toStartOf="@+id/textViewBalance"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textViewBalance" />
+
+                        <TextView
+                            android:id="@+id/textViewBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <Button
+                        android:id="@+id/buttonReplenish"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/button_replenish_background"
+                        android:text="@string/button_replenish_text"
+                        android:textAllCaps="false"
+                        android:textSize="17sp"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/buttonWithdraw"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutBalance" />
+
+                    <Button
+                        android:id="@+id/buttonWithdraw"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/button_withdraw_background"
+                        android:text="@string/button_withdraw_text"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWithdravhText"
+                        android:textSize="17sp"
+                        app:layout_constraintLeft_toRightOf="@+id/buttonReplenish"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutBalance" />
+
+                    <android.support.v7.widget.SearchView
+                        android:id="@+id/searchViewLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/search_view_height"
+                        android:background="@color/colorSerchViewBackground"
+                        android:theme="@style/SearchViewStyle"
+                        android:focusable="false"
+                        app:defaultQueryHint=""
+                        app:iconifiedByDefault="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewHeadBottom"
+                        app:searchIcon="@null">
+
+                    </android.support.v7.widget.SearchView>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/searchqueryHint"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/search_view_height"
+                        android:clickable="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewHeadBottom">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/search_icon_size"
+                                android:layout_height="@dimen/search_icon_size"
+                                android:layout_marginRight="16dp"
+                                android:src="@drawable/search_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="@string/search_query_hint_text"
+                                android:textColor="@color/colorQueryHintText"
+                                android:textSize="17sp">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorBottomNavigationView"
+        app:itemIconTint="@drawable/bottom_nav_item_selector"
+        app:itemTextColor="@drawable/bottom_nav_item_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>

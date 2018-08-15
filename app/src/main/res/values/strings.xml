@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">LeoWallet</string>
+    <string name="text_leo_wallet">LeoWallet</string>
+    <string name="title_purse">КОШЕЛЕК</string>
+    <string name="title_bonuses">БОНУСЫ</string>
+    <string name="title_history">ИСТОРИЯ</string>
+    <string name="title_profile">ПРОФИЛЬ</string>
+    <string name="groupe_favorite">Избранное</string>
+    <string name="groupe_last">Последние</string>
+    <string name="action_transfer_text">Перевести деньги</string>
+    <string name="action_pay_text">Оплатить услуги</string>
+    <string name="action_bill_text">Выставить счет</string>
+    <string name="button_replenish_text">Пополнить</string>
+    <string name="button_withdraw_text">Вывести</string>
+    <string name="search_query_hint_text">Поиск услуг и получателей...</string>
+    <string name="loading">Loading…</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="collapse_constraint_layout_margin_bottom">32dp</dimen>
+    <dimen name="leo_wallet_acount_height">46dp</dimen>
+    <dimen name="view_header_bottom_height">150dp</dimen>
+    <dimen name="action_image_size">86dp</dimen>
+    <dimen name="action_text_width">86dp</dimen>
+    <dimen name="search_view_height">60dp</dimen>
+    <dimen name="search_icon_size">24dp</dimen>
+</resources>
