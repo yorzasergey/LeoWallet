@@ -138,8 +138,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
             }
         });
 
-        //mSearchView.isonActionViewCollapsed();
-
         mDashboardAdapter = new AccountInfoRecyclerViewAdapter(new ArrayList<ListItem>(), mListItemOnClickListener, this);
 
         mRecyclerView.addItemDecoration(new MyDividerItemDecoration(this, R.drawable.divider));

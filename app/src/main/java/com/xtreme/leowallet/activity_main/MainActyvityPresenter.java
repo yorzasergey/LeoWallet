@@ -41,7 +41,7 @@ public class MainActyvityPresenter extends BasePresenter<MainActivityView> imple
 
                         @Override
                         public void onError(Throwable e) {
-                            //getView().showLoadingError();
+
                         }
 
                         @Override
